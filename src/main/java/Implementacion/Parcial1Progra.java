@@ -1,4 +1,4 @@
-package com.mycompany.parcial1progra;
+package Implementacion;
 
 public class Parcial1Progra {
 
