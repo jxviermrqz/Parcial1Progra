@@ -14,7 +14,6 @@ public class Piloto extends Personas{
     
     @Override
     public void calcularCategoria() {
-        // Si tiene 250 horas o más es priv, si no, Comercial
         if (this.horas >= 250) {
             this.setCategoria("Piloto Privado");
         } else {

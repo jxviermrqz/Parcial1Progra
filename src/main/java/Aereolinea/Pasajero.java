@@ -17,7 +17,6 @@ public class Pasajero extends Personas{
     
     @Override
     public void calcularCategoria() {
-        // Si pagó un pasaje mayor a 300 es VIP, de lo contrario es Regular
         if (this.valorPasaje > 300) {
             this.setCategoria("Clase VIP");
         } else {
