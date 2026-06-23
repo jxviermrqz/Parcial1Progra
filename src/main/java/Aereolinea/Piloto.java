@@ -7,9 +7,11 @@ public class Piloto extends Personas{
     
     //constructor 
 
-    public Piloto(int id, String nombres, int edad, Vuelos vuelo, String categoria) {
+    public Piloto(int horas, int id, String nombres, int edad, Vuelos vuelo, String categoria) {
         super(id, nombres, edad, vuelo, categoria);
+        this.horas = horas;
     }
+
     
     //getters setters
 
