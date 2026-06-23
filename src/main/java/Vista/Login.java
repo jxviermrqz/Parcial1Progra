@@ -1,5 +1,9 @@
 package Vista;
 
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
 public class Login extends javax.swing.JFrame {
     
     public Login() {
@@ -29,6 +33,11 @@ public class Login extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         btnIngresar.setText("INGRESAR");
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         btnSalir.setText("SALIR");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -157,6 +166,46 @@ public class Login extends javax.swing.JFrame {
     private void txtContraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtContraseñaFocusGained
 
     }//GEN-LAST:event_txtContraseñaFocusGained
+
+    private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+       //Prueba mientras hacemos el login
+        PantallaPrincipal p2 = new PantallaPrincipal();
+        p2.setLocationRelativeTo(null);
+        p2.setVisible(true);
+        p2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }//GEN-LAST:event_btnIngresarActionPerformed
+
+    public JButton getBtnIngresar() {
+        return btnIngresar;
+    }
+
+    public void setBtnIngresar(JButton btnIngresar) {
+        this.btnIngresar = btnIngresar;
+    }
+
+    public JButton getBtnSalir() {
+        return btnSalir;
+    }
+
+    public void setBtnSalir(JButton btnSalir) {
+        this.btnSalir = btnSalir;
+    }
+
+    public JTextField getTxtContraseña() {
+        return txtContraseña;
+    }
+
+    public void setTxtContraseña(JTextField txtContraseña) {
+        this.txtContraseña = txtContraseña;
+    }
+
+    public JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
+
+    public void setTxtUsuario(JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
