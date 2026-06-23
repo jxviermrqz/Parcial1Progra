@@ -3,16 +3,43 @@ package Implementacion;
 import Aereolinea.*;
 import Data.Datos;
 import Vista.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
-public class Principal implements Datos {
+public class Principal implements Datos , ActionListener {
 
     private ArrayList<Vuelos> viajes = new ArrayList<>();
     private ArrayList<Personas> pasajeros = new ArrayList<>(); 
+    private final PantallaPrincipal vistaPrincipal;
+
+    Principal (PantallaPrincipal p2) {
+        this.vistaPrincipal = p2;
+        
+        this.vistaPrincipal.getBtnCargarDatos().addActionListener(this);
+        this.vistaPrincipal.getBtnMostrarCategoria().addActionListener(this);
+        this.vistaPrincipal.getBtnReporte().addActionListener(this);
+        this.vistaPrincipal.getBtnSalir().addActionListener(this);
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vistaPrincipal.getBtnCargarDatos()) {
+            cargarDatos();
+        } else if (e.getSource() == vistaPrincipal.getBtnMostrarCategoria()) {
+            //mostrarCategoria();
+        } else if (e.getSource() == vistaPrincipal.getBtnReporte()) {
+            //reporte();
+        } else if (e.getSource() == vistaPrincipal.getBtnSalir()) {
+            salir();
+       }
+    }
     
     public static void main(String[] args) {
         Login p1 = new Login();
+        Implementacion.ControladorLogin controlador = new Implementacion.ControladorLogin(p1);
         p1.setLocationRelativeTo(null);
         p1.setVisible(true);
         p1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,4 +76,16 @@ public class Principal implements Datos {
             String categoriaInicial = "no se";   
         }
     }   
+    void salir() {
+        // CORREGIDO: Se cambió 'vista' por 'vistaPrincipal'
+        int opcion = JOptionPane.showConfirmDialog(vistaPrincipal, 
+                "¿Seguro que desea salir del sistema?", 
+                "Salir", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.QUESTION_MESSAGE);
+        
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }
 }
