@@ -13,6 +13,16 @@ public class Azafata extends Personas {
         this.idiomas = idiomas;
     }
     
+    @Override
+    public void calcularCategoria() {
+        // Si mide 1.65 o más Y habla al menos 2 idiomas, es Senior Internacional
+        if (this.altura >= 1.60 && this.idiomas >= 2) {
+            this.setCategoria("Senior Internacional");
+        } else {
+            this.setCategoria("Junior Nacional");
+        }
+    }
+    
     //getters setters 
 
     public double getAltura() {

@@ -37,12 +37,24 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 204, 255));
 
+        btnCargarDatos.setBackground(new java.awt.Color(204, 204, 204));
+        btnCargarDatos.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnCargarDatos.setForeground(new java.awt.Color(0, 0, 51));
         btnCargarDatos.setText("Cargar Datos");
 
+        btnMostrarCategoria.setBackground(new java.awt.Color(204, 204, 204));
+        btnMostrarCategoria.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnMostrarCategoria.setForeground(new java.awt.Color(0, 0, 51));
         btnMostrarCategoria.setText("Mostrar Categoria");
 
+        btnReporte.setBackground(new java.awt.Color(204, 204, 204));
+        btnReporte.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        btnReporte.setForeground(new java.awt.Color(0, 0, 51));
         btnReporte.setText("Reporte");
 
+        btnSalir.setBackground(new java.awt.Color(255, 204, 204));
+        btnSalir.setFont(new java.awt.Font("Serif", 1, 12)); // NOI18N
+        btnSalir.setForeground(new java.awt.Color(0, 0, 0));
         btnSalir.setText("SALIR");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,13 +69,13 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnReporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMostrarCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                     .addComponent(btnCargarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnSalir)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addComponent(btnReporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -71,38 +83,40 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 .addGap(111, 111, 111)
                 .addComponent(btnCargarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnMostrarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(btnMostrarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 2, 170, 370));
 
+        jTable1.setBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Nombre", "Edad", "Tipo de Persona", "Vuelo / Destino", "Dato Particular", "Categoría"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jTabbedPane1.addTab("tab1", jScrollPane1);
+        jTabbedPane1.addTab("Cargar Datos", jScrollPane1);
 
+        jTextPane1.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(jTextPane1);
 
-        jTabbedPane1.addTab("tab2", jScrollPane2);
+        jTabbedPane1.addTab("Reporte", jScrollPane2);
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 500, 350));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Javier\\Pruebas progra\\Parcial1Progra\\src\\main\\resources\\fondoPrincipal.jpg")); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

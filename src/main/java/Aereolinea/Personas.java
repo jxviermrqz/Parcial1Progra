@@ -19,8 +19,12 @@ public abstract class Personas {
         this.categoria = categoria;
     }
     
+    
+    public void calcularCategoria() {
+    
+    }
+    
     //getters setters
-
     public int getId() {
         return id;
     }
