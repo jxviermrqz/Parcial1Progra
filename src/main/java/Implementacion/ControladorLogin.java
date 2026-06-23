@@ -38,7 +38,7 @@ public class ControladorLogin implements ActionListener {
 
         if (usuario.equals("admin") && contraseña.equals("123")) {
             JOptionPane.showMessageDialog(vistaLogin, 
-                    "Hola", 
+                    "Bienvenido al sistema de gestor de vuelos.", 
                     "Ingreso", 
                     JOptionPane.INFORMATION_MESSAGE);
             

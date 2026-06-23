@@ -10,7 +10,7 @@ public interface Datos {
     };
             
     String[] datos_persona={
-       "PASAJERO;V-12345678;Pedro Lopez;25;QL901;Asiento 12A;150",
+        "PASAJERO;V-12345678;Pedro Lopez;25;QL901;Asiento 12A;150",
         "PASAJERO;V-87654321;Maria Marquez;30;QL901;Asiento 12B;150",
         "PASAJERO;V-11223344;Luis Lopezz;45;9V1200;Asiento 05C;320",
         "PASAJERO;V-55667788;Ana Armijo;22;QL901;Asiento 14A;150",

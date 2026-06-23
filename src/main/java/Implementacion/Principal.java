@@ -51,7 +51,6 @@ public class Principal implements Datos, ActionListener {
     }
     
     public void cargarDatos() {
-        // Limpiamos las listas por si el usuario le da clic al botón más de una vez
         viajes.clear();
         pasajeros.clear();
 
@@ -214,7 +213,6 @@ public class Principal implements Datos, ActionListener {
                 }
             }
         }
-        // Armamos el texto final para mostrarlo en el componente de texto plano
         String txt = "==================================================\n";
         txt += "            REPORTE ESTADÍSTICO DE OPERACIONES    \n";
         txt += "==================================================\n\n";
@@ -241,7 +239,6 @@ public class Principal implements Datos, ActionListener {
         }
         txt += "==================================================\n";
 
-        // Pintamos el reporte en la interfaz y cambiamos el JTabbedPane a la pestaña 2 (índice 1)
         vistaPrincipal.getjTextPane1().setText(txt);
         vistaPrincipal.getjTabbedPane1().setSelectedIndex(1);
     }
