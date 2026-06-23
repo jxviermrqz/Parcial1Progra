@@ -9,18 +9,18 @@ import javax.swing.JOptionPane;
 public class ControladorLogin implements ActionListener {
     private final Login vistaLogin;
 
-    ControladorLogin(Login p1) {
+    public ControladorLogin(Login p1) {
         this.vistaLogin = p1;
-        
         this.vistaLogin.getBtnIngresar().addActionListener(this);
-        this.vistaLogin.getBtnSalir().addActionListener(this);    }
+        this.vistaLogin.getBtnSalir().addActionListener(this);    
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vistaLogin.getBtnIngresar()) {
             comprobarUsuario();
         } else if (e.getSource() == vistaLogin.getBtnSalir()) {
-            salir();
+            System.exit(0); 
         } 
     }
 
@@ -30,7 +30,7 @@ public class ControladorLogin implements ActionListener {
 
         if (usuario.isEmpty() || contraseña.isEmpty()) {
             JOptionPane.showMessageDialog(vistaLogin, 
-                    "complete todos los campos.", 
+                    "Complete todos los campos.", 
                     "Campos Vacíos", 
                     JOptionPane.WARNING_MESSAGE);
             return;
@@ -41,7 +41,11 @@ public class ControladorLogin implements ActionListener {
                     "Hola", 
                     "Ingreso", 
                     JOptionPane.INFORMATION_MESSAGE);
+            
             PantallaPrincipal p2 = new PantallaPrincipal();
+            
+            Principal controladorPrincipal = new Principal(p2); 
+            
             p2.setLocationRelativeTo(null);
             p2.setVisible(true);
             p2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,18 +60,5 @@ public class ControladorLogin implements ActionListener {
             vistaLogin.getTxtContraseña().setText("");
             vistaLogin.getTxtUsuario().requestFocusInWindow();
         }
-    }
-
-    private void salir() {
-        int opcion = JOptionPane.showConfirmDialog(vistaLogin, 
-                "seguro que desea salir del sistema?", 
-                "Salir", 
-                JOptionPane.YES_NO_OPTION, 
-                JOptionPane.QUESTION_MESSAGE);
-        
-        if (opcion == JOptionPane.YES_OPTION) {
-            System.exit(0);
-        }
-    }
-    
+    } 
 }
