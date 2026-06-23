@@ -19,7 +19,6 @@ public class Principal implements Datos, ActionListener {
         this.vistaPrincipal = p2;
         
         this.vistaPrincipal.getBtnCargarDatos().addActionListener(this);
-        this.vistaPrincipal.getBtnMostrarCategoria().addActionListener(this);
         this.vistaPrincipal.getBtnReporte().addActionListener(this);
         this.vistaPrincipal.getBtnSalir().addActionListener(this);
     }
@@ -36,9 +35,6 @@ public class Principal implements Datos, ActionListener {
         
             System.out.println("entro a cargardatos y lleno la tabla");
             JOptionPane.showMessageDialog(vistaPrincipal, "¡Datos cargados con éxito!");
-            
-        } else if (e.getSource() == vistaPrincipal.getBtnMostrarCategoria()) {
-            //mostrarCategoria();
         } else if (e.getSource() == vistaPrincipal.getBtnReporte()) {
             reporte();
         } else if (e.getSource() == vistaPrincipal.getBtnSalir()) {

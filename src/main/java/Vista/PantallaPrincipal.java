@@ -20,7 +20,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnCargarDatos = new javax.swing.JButton();
-        btnMostrarCategoria = new javax.swing.JButton();
         btnReporte = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -41,11 +40,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         btnCargarDatos.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         btnCargarDatos.setForeground(new java.awt.Color(0, 0, 51));
         btnCargarDatos.setText("Cargar Datos");
-
-        btnMostrarCategoria.setBackground(new java.awt.Color(204, 204, 204));
-        btnMostrarCategoria.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
-        btnMostrarCategoria.setForeground(new java.awt.Color(0, 0, 51));
-        btnMostrarCategoria.setText("Mostrar Categoria");
 
         btnReporte.setBackground(new java.awt.Color(204, 204, 204));
         btnReporte.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
@@ -69,24 +63,21 @@ public class PantallaPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnMostrarCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                    .addComponent(btnCargarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCargarDatos, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnSalir)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(btnReporte, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(111, 111, 111)
+                .addGap(133, 133, 133)
                 .addComponent(btnCargarDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(37, 37, 37)
                 .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnMostrarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
@@ -117,6 +108,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         jTabbedPane1.addTab("Reporte", jScrollPane2);
 
         jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 500, 350));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fondoPrincipal.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 370));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -143,14 +136,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     public void setBtnCargarDatos(JButton btnCargarDatos) {
         this.btnCargarDatos = btnCargarDatos;
-    }
-
-    public JButton getBtnMostrarCategoria() {
-        return btnMostrarCategoria;
-    }
-
-    public void setBtnMostrarCategoria(JButton btnMostrarCategoria) {
-        this.btnMostrarCategoria = btnMostrarCategoria;
     }
 
     public JButton getBtnReporte() {
@@ -196,7 +181,6 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCargarDatos;
-    public javax.swing.JButton btnMostrarCategoria;
     public javax.swing.JButton btnReporte;
     public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
