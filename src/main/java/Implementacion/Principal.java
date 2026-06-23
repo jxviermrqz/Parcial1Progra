@@ -13,6 +13,7 @@ public class Principal implements Datos {
     
     public static void main(String[] args) {
         Login p1 = new Login();
+        Implementacion.ControladorLogin controlador = new Implementacion.ControladorLogin(p1);
         p1.setLocationRelativeTo(null);
         p1.setVisible(true);
         p1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

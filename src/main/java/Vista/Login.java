@@ -32,6 +32,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnIngresar.setBackground(new java.awt.Color(153, 153, 153));
         btnIngresar.setText("INGRESAR");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,6 +40,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        btnSalir.setBackground(new java.awt.Color(153, 153, 153));
         btnSalir.setText("SALIR");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,6 +48,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        txtUsuario.setBackground(new java.awt.Color(204, 204, 204));
         txtUsuario.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtUsuarioFocusGained(evt);
@@ -60,6 +63,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        txtContraseña.setBackground(new java.awt.Color(204, 204, 204));
         txtContraseña.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 txtContraseñaFocusGained(evt);
@@ -75,8 +79,12 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("LOGIN");
 
+        jLabel3.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel3.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         jLabel3.setText("Usuario");
 
+        jLabel4.setBackground(new java.awt.Color(51, 51, 51));
+        jLabel4.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         jLabel4.setText("Contraseña");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -168,11 +176,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtContraseñaFocusGained
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-       //Prueba mientras hacemos el login
-        PantallaPrincipal p2 = new PantallaPrincipal();
-        p2.setLocationRelativeTo(null);
-        p2.setVisible(true);
-        p2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     public JButton getBtnIngresar() {
@@ -209,8 +213,8 @@ public class Login extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnIngresar;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
